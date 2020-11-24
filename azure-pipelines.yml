@@ -3,6 +3,7 @@ trigger:
 
 variables:
   BUILD_COMMIT: f9a4d327c04013bb820e2addd9eb6f099980908a
+  ANACONDA_ORG: ofajardo
 
 jobs:
   - template: azure/posix.yml
