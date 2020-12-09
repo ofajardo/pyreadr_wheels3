@@ -2,7 +2,7 @@ trigger:
 - main
 
 variables:
-  BUILD_COMMIT: f9a4d327c04013bb820e2addd9eb6f099980908a
+  BUILD_COMMIT: 9188578570bcc7fb18fc81242399fdfdefbfbf20
   ANACONDA_ORG: ofajardo
 
 jobs:

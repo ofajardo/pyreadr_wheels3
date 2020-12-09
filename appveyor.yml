@@ -2,7 +2,7 @@ environment:
 
   global:
     # Remember to edit .travis.yml too
-    BUILD_COMMIT: f9a4d327c04013bb820e2addd9eb6f099980908a 
+    BUILD_COMMIT: 9188578570bcc7fb18fc81242399fdfdefbfbf20
     ANACONDA_ORG: ofajardo
     # ANACONDA_TOKEN should be set in appveyor
 
@@ -75,6 +75,7 @@ test_script:
   #- "build.cmd %PYTHON%\\python.exe setup.py test"
 
   # Run some tests
+  - pip install xarray
   - mkdir tmp
   - cd tmp
   - python ../tests/test_basic.py

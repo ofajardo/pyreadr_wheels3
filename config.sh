@@ -12,6 +12,7 @@ function pre_build {
 
 function run_tests {
     # Runs tests on installed distribution from an empty directory
+    pip install xarray
     python --version
     python ../pyreadr/tests/test_basic.py
 }
