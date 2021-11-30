@@ -1,3 +1,6 @@
+image:
+  - Visual Studio 2019
+
 environment:
 
   global:
@@ -17,6 +20,7 @@ environment:
     - PYTHON_VERSION: "3.7"
     - PYTHON_VERSION: "3.8"
     - PYTHON_VERSION: "3.9"
+    - PYTHON_VERSION: "3.10"
 
 platform:
   - x64
@@ -25,7 +29,7 @@ platform:
 install:
   - git submodule update --init
   # activate conda
-  - set CONDAPATH=C:\Miniconda37
+  - set CONDAPATH=C:\Miniconda38
   - if "%PLATFORM%" == "x64" set CONDAPATH=%CONDAPATH%-x64
   - call %CONDAPATH%\Scripts\activate
   # prepare environment with conda
@@ -38,7 +42,8 @@ install:
   - python --version
   - python -c "import struct; print(struct.calcsize('P') * 8)"
   # install necessary packages
-  - conda install -q setuptools pip cython wheel
+  #- conda install -q setuptools pip cython wheel
+  - pip install cython
   - conda install -c conda-forge libpython
   # mingw64 toolchain to compile python extensions
   - conda install -q -c msys2 m2w64-toolchain
