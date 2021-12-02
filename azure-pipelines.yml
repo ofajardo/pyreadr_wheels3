@@ -2,7 +2,7 @@ trigger:
 - main
 
 variables:
-  BUILD_COMMIT: def31fab3423bf30067e7bc6d94e40b275b7a9f9
+  BUILD_COMMIT: db58ff3f50236496788dd747b62cb4cd32fe33a6
   ANACONDA_ORG: ofajardo
 
 jobs:
@@ -11,8 +11,6 @@ jobs:
       name: macOS
       vmImage: macOS-1015
       matrix:
-        py_3.6_64:
-          MB_PYTHON_VERSION: "3.6"
         py_3.7_64:
           MB_PYTHON_VERSION: "3.7"
         py_3.8_64:
@@ -27,9 +25,6 @@ jobs:
       name: linux
       vmImage: ubuntu-20.04
       matrix:
-        py_3.6_64manylinux1:
-          MB_PYTHON_VERSION: "3.6"
-          MB_ML_VER: "2014"
         py_3.7_64manylinux1:
           MB_PYTHON_VERSION: "3.7"
           MB_ML_VER: "2014"
@@ -48,11 +43,6 @@ jobs:
       name: linuxaarch64
       vmImage: ubuntu-20.04
       matrix:
-        py_3.6_aarch64manylinux2014:
-          MB_PYTHON_VERSION: "3.6"
-          MB_ML_VER: "2014"
-          PLAT: "aarch64"
-          DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
         py_3.7_aarch64manylinux2014:
           MB_PYTHON_VERSION: "3.7"
           MB_ML_VER: "2014"
