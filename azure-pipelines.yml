@@ -19,16 +19,16 @@ jobs:
           MB_PYTHON_VERSION: "3.9"
         py_3.10_64:
           MB_PYTHON_VERSION: "3.10"
-        py_3.7_64:
+        py_3.7_64_arm64:
           MB_PYTHON_VERSION: "3.7"
           PLAT: arm64
-        py_3.8_64:
+        py_3.8_64_arm64:
           MB_PYTHON_VERSION: "3.8"
           PLAT: arm64
-        py_3.9_64:
+        py_3.9_64_arm64:
           MB_PYTHON_VERSION: "3.9"
           PLAT: arm64
-        py_3.10_64:
+        py_3.10_64_arm64:
           MB_PYTHON_VERSION: "3.10"
           PLAT: arm64
 
